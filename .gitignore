@@ -1,0 +1,27 @@
+# Dependências
+node_modules/
+
+# Build
+dist/
+*.local
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ambiente
+.env
+.env.*.local
+
+# Editor / SO
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# TypeScript / Vite
+*.tsbuildinfo
