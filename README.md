@@ -2,10 +2,6 @@
 
 Repositório do site da **Pulse**: página inicial com artigo em destaque, área de posts e seção de tags. É um app [React](https://react.dev/) servido pelo [Vite](https://vite.dev/), com estilos em [Tailwind CSS](https://tailwindcss.com/) e animações com [Motion](https://motion.dev/).
 
-## O que você precisa
-
-- [Node.js](https://nodejs.org/) 20 ou mais novo (a versão LTS costuma ser a mais estável).
-
 ## Como rodar o projeto
 
 ```bash
