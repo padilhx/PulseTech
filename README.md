@@ -1,6 +1,6 @@
 # PulseTech
 
-Repositório do site da **Pulse**: página inicial com artigo em destaque, área de posts e seção de tags. É um app [React](https://react.dev/) servido pelo [Vite](https://vite.dev/), com estilos em [Tailwind CSS](https://tailwindcss.com/) e animações com [Motion](https://motion.dev/).
+Repositório do site da **Pulse**: página inicial com artigo em destaque, área de posts e seção de tags. É um app [React](https://react.dev/) com [Next.js](https://nextjs.org/) e estilos em [Tailwind CSS](https://tailwindcss.com/).
 
 ## O que você precisa
 
@@ -13,12 +13,13 @@ npm install
 npm run dev
 ```
 
-Depois, abra no navegador o endereço que o Vite mostrar no terminal (geralmente `http://localhost:5173`).
+Depois, abra no navegador [http://localhost:3000](http://localhost:3000).
 
 **Outros comandos úteis**
 
-- `npm run build` — verifica os tipos com TypeScript e gera a pasta `dist` para produção.
-- `npm run preview` — serve localmente a pasta `dist` para você testar o resultado do build no navegador.
+- `npm run typecheck` — verifica os tipos com TypeScript.
+- `npm run build` — gera o build de produção do Next.js.
+- `npm run start` — sobe o build de produção localmente.
 
 Você também pode usar `pnpm` ou `yarn` no lugar do `npm`, se for o que você já usa no dia a dia.
 
@@ -31,4 +32,4 @@ Você também pode usar `pnpm` ou `yarn` no lugar do `npm`, se for o que você j
 - `src/app/components/sections/` — blocos da home (`Hero`, lista de artigos, tags).
 - `src/styles/` — CSS global, Tailwind e cores básicas no `theme.css`.
 
-O alias `@/` aponta para a pasta `src/` (definido no `vite.config.ts` e no `tsconfig.json`).
+O alias `@/` aponta para a pasta `src/` (definido no `tsconfig.json`).

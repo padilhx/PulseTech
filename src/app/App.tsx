@@ -1,13 +1,15 @@
-import { useCallback, useMemo, useState } from "react";
-import { Footer } from "./components/layout/Footer";
-import { Navbar } from "./components/layout/Navbar";
-import { ArticleModal } from "./components/ArticleModal";
-import { Hero } from "./components/sections/Hero";
-import { LatestArticles } from "./components/sections/LatestArticles";
-import { TrendingTopics } from "./components/sections/TrendingTopics";
-import type { Article } from "./data/content";
-import { tagStats } from "./data/content";
-import { scrollToId } from "../lib/scrollToId";
+"use client";
+
+import { useCallback, useMemo, useState } from 'react';
+import { Footer } from './components/layout/Footer';
+import { Navbar } from './components/layout/Navbar';
+import { ArticleModal } from './components/ArticleModal';
+import { Hero } from './components/sections/Hero';
+import { LatestArticles } from './components/sections/LatestArticles';
+import { TrendingTopics } from './components/sections/TrendingTopics';
+import type { Article } from './data/content';
+import { tagStats } from './data/content';
+import { scrollToId } from '../lib/scrollToId';
 
 export default function App() {
   const [openArticle, setOpenArticle] = useState<Article | null>(null);
@@ -18,7 +20,7 @@ export default function App() {
   const changeTag = useCallback((tag: string | null) => {
     setActiveTag(tag);
     if (tag !== null) {
-      scrollToId("arquivo");
+      scrollToId('arquivo');
     }
   }, []);
 
@@ -27,11 +29,22 @@ export default function App() {
       <Navbar />
       <main className="flex-1 w-full">
         <Hero />
-        <TrendingTopics stats={stats} activeTag={activeTag} onChangeTag={changeTag} />
-        <LatestArticles onReadArticle={setOpenArticle} activeTag={activeTag} onChangeTag={changeTag} />
+        <TrendingTopics
+          stats={stats}
+          activeTag={activeTag}
+          onChangeTag={changeTag}
+        />
+        <LatestArticles
+          onReadArticle={setOpenArticle}
+          activeTag={activeTag}
+          onChangeTag={changeTag}
+        />
       </main>
       <Footer />
-      <ArticleModal article={openArticle} onClose={() => setOpenArticle(null)} />
+      <ArticleModal
+        article={openArticle}
+        onClose={() => setOpenArticle(null)}
+      />
     </div>
   );
 }
